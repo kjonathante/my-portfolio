@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 const conatinerFluid = {
@@ -29,16 +30,25 @@ const style = {
   container: {
     ...container
   }
-}
+};
 
 function Container(props) {
-  const {children, classes} = props
-  console.log(props)
-  return(
-    <div className={classes.container}>
+  const { children, classes, className, ...rest } = props;
+  return (
+    <div className={classes.container + " " + className} {...rest}>
       {children}
     </div>
-  )
+  );
 }
 
-export default withStyles(style)(Container)
+Container.defaultProps = {
+  className: ""
+};
+
+Container.propTypes = {
+  classes: PropTypes.object.isRequired,
+  children: PropTypes.node,
+  className: PropTypes.string
+};
+
+export default withStyles(style)(Container);
