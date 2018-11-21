@@ -1,29 +1,66 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Container from "./components/Container"
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+import Parallax from "./components/Parallax/Parallax";
+import Container from "./components/Container";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 
 class App extends Component {
   render() {
     return (
-      <Container>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Parallax filter image={require("./assets/img/dark_background.jpg")}>
+          <Container style={{ color: "white" }}>
+            <h1>Kit Jonathan Te</h1>
+          </Container>
+        </Parallax>
+        <Paper style={{zIndex: 3}} elevation={1}>
+          <Typography variant="h5" component="h3">
+            This is a sheet of paper.
+          </Typography>
+          <Typography component="p">
+            Paper can be used to build surface or other elements for your
+            application.
+          </Typography>
+          <Typography variant="h5" component="h3">
+            This is a sheet of paper.
+          </Typography>
+          <Typography component="p">
+            Paper can be used to build surface or other elements for your
+            application.
+          </Typography>
+          <Typography variant="h5" component="h3">
+            This is a sheet of paper.
+          </Typography>
+          <Typography component="p">
+            Paper can be used to build surface or other elements for your
+            application.
+          </Typography>
+          <Typography variant="h5" component="h3">
+            This is a sheet of paper.
+          </Typography>
+          <Typography component="p">
+            Paper can be used to build surface or other elements for your
+            application.
+          </Typography>
+          <Typography variant="h5" component="h3">
+            This is a sheet of paper.
+          </Typography>
+          <Typography component="p">
+            Paper can be used to build surface or other elements for your
+            application.
+          </Typography>
+          <Typography variant="h5" component="h3">
+            This is a sheet of paper.
+          </Typography>
+          <Typography component="p">
+            Paper can be used to build surface or other elements for your
+            application.
+          </Typography>
+        </Paper>
       </div>
-      </Container>
     );
   }
 }

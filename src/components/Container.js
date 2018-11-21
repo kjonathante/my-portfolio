@@ -28,6 +28,8 @@ const container = {
 
 const style = {
   container: {
+    zIndex: "12",
+    color: "#FFFFFF",
     ...container
   }
 };
