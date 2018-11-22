@@ -4,11 +4,11 @@ import classNames from "classnames";
 
 import Parallax from "../../components/Parallax/Parallax";
 import Container from "../../components/Container/Container";
-import Main from "../../components/Main/Main";
 import GridContainer from "../../components/Grid/GridContainer";
 import GridItem from "../../components/Grid/GridItem";
+import Portfolio from "./Sections/Portfolio/Portfolio";
 
-import landingPageStyle from "./landingPageStyle"
+import landingPageStyle from "./landingPageStyle";
 
 class LandingPage extends Component {
   render() {
@@ -35,6 +35,7 @@ class LandingPage extends Component {
         </Parallax>
         <Container className={classNames(classes.main, classes.mainRaised)}>
           <Container className={classes.container}>
+            <Portfolio />
             <h1>Testing</h1>
             <h1>Testing</h1>
             <h1>Testing</h1>
