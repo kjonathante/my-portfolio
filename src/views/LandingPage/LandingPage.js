@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
+import classNames from "classnames";
 
 import Parallax from "../../components/Parallax/Parallax";
 import Container from "../../components/Container/Container";
@@ -7,22 +8,8 @@ import Main from "../../components/Main/Main";
 import GridContainer from "../../components/Grid/GridContainer";
 import GridItem from "../../components/Grid/GridItem";
 
-const style = {
-  title: {
-    color: "#3C4858",
-    margin: "1.75rem 0 0.875rem",
-    textDecoration: "none",
-    fontWeight: "700",
-    fontFamily: `"Roboto Slab", "Times New Roman", serif`,
-    
-    display: "inline-block",
-    position: "relative",
-    marginTop: "30px",
-    minHeight: "32px",
-    color: "#FFFFFF",
-    textDecoration: "none"
-  }
-};
+import landingPageStyle from "./landingPageStyle"
+
 class LandingPage extends Component {
   render() {
     const { classes } = this.props;
@@ -32,7 +19,7 @@ class LandingPage extends Component {
           filter
           image={require("../../assets/img/dark_background.jpg")}
         >
-          <Container>
+          <Container className={classes.container}>
             <GridContainer>
               <GridItem xs={12} md={6}>
                 <h1 className={classes.title}>Kit Jonathan Te</h1>
@@ -46,8 +33,8 @@ class LandingPage extends Component {
             </GridContainer>
           </Container>
         </Parallax>
-        <Main>
-          <Container>
+        <Container className={classNames(classes.main, classes.mainRaised)}>
+          <Container className={classes.container}>
             <h1>Testing</h1>
             <h1>Testing</h1>
             <h1>Testing</h1>
@@ -64,10 +51,10 @@ class LandingPage extends Component {
             <h1>Testing</h1>
             <h1>Testing</h1>
           </Container>
-        </Main>
+        </Container>
       </div>
     );
   }
 }
 
-export default withStyles(style)(LandingPage);
+export default withStyles(landingPageStyle)(LandingPage);
