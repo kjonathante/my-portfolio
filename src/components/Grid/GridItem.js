@@ -10,8 +10,7 @@ const style = {
     minHeight: "1px",
     paddingRight: "15px",
     paddingLeft: "15px",
-    flexBasis: "auto",
-    backgroundColor: "blue"
+    flexBasis: "auto"
   }
 };
 
